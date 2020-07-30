@@ -2,15 +2,14 @@ package com.alfansyah.oop.classified;
 
 public class Hewan {
 
-    public String nama="",jenis="";
+    public String nama = "", jenis = "";
     public int umur;
 
-    public Hewan(String nama,int umur,String jenis) {
+    public Hewan(String nama, int umur, String jenis) {
         this.nama = nama;
         this.umur = umur;
         this.jenis = jenis;
     }
-
 
 
     public String getNama() {
@@ -38,8 +37,26 @@ public class Hewan {
     }
 
 
-    public void profileHewan(){
-        System.out.println("Nama Hewan: "+nama+" Jenis Hewan: "+jenis+" Umur Hewan: "+umur);
+    public void profileHewan() {
+
+        System.out.println("Nama Hewan: " + nama + "\n Jenis Hewan: " + jenis + "\n Umur Hewan: " + umur);
+    }
+
+    //2. OOP IMplementation
+
+    public String statusHewan() {
+        try {
+            if (umur < 1) {
+                return "belum siap diternakan";
+            } else if (umur <= 4) {
+                return "siap diternakan";
+            } else {
+                return "hewan sudah tua";
+            }
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+
     }
 
 }
