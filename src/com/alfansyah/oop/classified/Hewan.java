@@ -37,9 +37,9 @@ public class Hewan {
     }
 
 
-    public void profileHewan() {
+    public String profileHewan() {
 
-        System.out.println("Nama Hewan: " + nama + "\n Jenis Hewan: " + jenis + "\n Umur Hewan: " + umur);
+        return ("Nama Hewan: " + nama + "\n Jenis Hewan: " + jenis + "\n Umur Hewan: " + umur);
     }
 
     //2. OOP IMplementation
@@ -48,7 +48,7 @@ public class Hewan {
         try {
             if (umur < 1) {
                 return "belum siap diternakan";
-            } else if (umur <= 4) {
+            } else if (umur >=1 && umur<= 4) {
                 return "siap diternakan";
             } else {
                 return "hewan sudah tua";

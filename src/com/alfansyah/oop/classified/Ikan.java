@@ -5,10 +5,11 @@ public class Ikan extends Hewan {
         super(nama, umur, jenis);
     }
 
-//    public Integer hitungBerat(int bobot) {
-//    }
-//
-//    public Integer hitungBerat(int bobot, int kandunganAir) {
-//
-//    }
+    public Integer hitungBerat(int bobot) {
+        return Math.multiplyExact(umur, bobot);
+    }
+
+    public Integer hitungBerat(int bobot, int kandunganAir) {
+        return Math.multiplyExact(umur, bobot) - kandunganAir;
+    }
 }
